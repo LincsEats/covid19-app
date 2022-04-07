@@ -37,10 +37,16 @@ class HandleInertiaRequests extends Middleware
         return array_merge(parent::share($request), [
             'auth' => [
                 'user' => $request->user(),
+                //globally share the roles and permissions for users so they accessible within the js pages
+                'role' => is_null($request->user()) ? 0 : $request->user()->getRoleNames()[0],
+                'permissions' => is_null($request->user()) ? 0 :  $request->user()->getPermissionsViaRoles()->pluck("name"),
             ],
             'ziggy' => function () {
                 return (new Ziggy)->toArray();
             },
-        ]);
+          
+        ]);     
     }
 }
+
+

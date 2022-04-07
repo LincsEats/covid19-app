@@ -5231,6 +5231,7 @@ __webpack_require__.r(__webpack_exports__);
 function Register() {
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_6__.useForm)({
     name: '',
+    niNumber: '',
     email: '',
     password: '',
     password_confirmation: ''
@@ -5274,6 +5275,20 @@ function Register() {
           value: data.name,
           className: "mt-1 block w-full",
           autoComplete: "name",
+          isFocused: true,
+          handleChange: onHandleChange,
+          required: true
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Label__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          forInput: "niNumber",
+          value: "niNumber"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_Components_Input__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          type: "text",
+          name: "niNumber",
+          value: data.niNumber,
+          className: "mt-1 block w-full",
+          autoComplete: "niNumber",
           isFocused: true,
           handleChange: onHandleChange,
           required: true

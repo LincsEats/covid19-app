@@ -12,8 +12,12 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-        // \App\Models\User::factory(10)->create();
-    }
+    public function run(){
+        $this->call([
+            //see the database with the created users and permissions for testing
+             UserSeeder::class,
+          
+             PermissionsSeeder::class
+        ]);
+   }
 }

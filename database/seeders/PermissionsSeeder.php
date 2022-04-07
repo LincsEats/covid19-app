@@ -48,6 +48,7 @@ class PermissionsSeeder extends Seeder
         // Assign roles to users (in this case for user id -> 1 & 2)
         User::find(1)->assignRole('admin');
         User::find(2)->assignRole('editor');
+        User::find(3)->assignRole('user');
 
     }
 }
